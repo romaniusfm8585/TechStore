@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="site-header">
+        <h1>TechStore</h1>
+        <p>Комп'ютерна техніка та комплектуючі</p>
+    </header>
+
+    <!-- Навігація -->
+    <nav class="site-nav" aria-label="Основна навігація">
+        <strong>Каталог техніки</strong>
+        <ul class="nav-list">
+            <li><a href="#">Головна</a></li>
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#delivery">Доставка</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основний макет -->
+    <main class="main-layout">
+        <section class="panel">
+            <h2>Популярні товари</h2>
+            
+            <!-- Grid-сітка карток -->
+            <div class="product-grid" id="catalog">
+                <article class="product-card">
+                    <img class="product-image" src="images/laptop.webp" alt="Чорний ноутбук з підсвіткою клавіатури">
+                    <h3>Ноутбук</h3>
+                    <p>Для навчання та роботи.</p>
+                    <p class="price">35 000 грн</p>
+                    <div class="card-actions">
+                        <a class="btn btn-secondary" href="#">Детальніше</a>
+                        <button class="btn btn-primary" type="button">До кошика</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img class="product-image" src="images/monitor.webp" alt="27-дюймовий IPS-монітор" loading="lazy">
+                    <h3>Монітор</h3>
+                    <p>27-дюймовий IPS-монітор.</p>
+                    <p class="price">9 500 грн</p>
+                    <div class="card-actions">
+                        <a class="btn btn-secondary" href="#">Детальніше</a>
+                        <button class="btn btn-primary" type="button">До кошика</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <h3>Клавіатура</h3>
+                    <p>Механічна клавіатура.</p>
+                    <p class="price">2 500 грн</p>
+                    <div class="card-actions">
+                        <a class="btn btn-secondary" href="#">Детальніше</a>
+                        <button class="btn btn-primary" type="button">До кошика</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <h3>Миша</h3>
+                    <p>Бездротова миша.</p>
+                    <p class="price">1 300 грн</p>
+                    <div class="card-actions">
+                        <a class="btn btn-secondary" href="#">Детальніше</a>
+                        <button class="btn btn-primary" type="button">До кошика</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <h3>SSD</h3>
+                    <p>NVMe SSD на 1 ТБ.</p>
+                    <p class="price">3 200 грн</p>
+                    <div class="card-actions">
+                        <a class="btn btn-secondary" href="#">Детальніше</a>
+                        <button class="btn btn-primary" type="button">До кошика</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <h3>Навушники</h3>
+                    <p>Гарнітура з мікрофоном.</p>
+                    <p class="price">2 100 грн</p>
+                    <div class="card-actions">
+                        <a class="btn btn-secondary" href="#">Детальніше</a>
+                        <button class="btn btn-primary" type="button" disabled>Немає в наявності</button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Таблиця порівняння -->
+            <div style="margin-top: 30px;">
+                <h3>Порівняння товарів</h3>
+                <div class="table-wrapper">
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>Товар</th>
+                                <th>Ціна</th>
+                                <th>Наявність</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ноутбук</td>
+                                <td>35 000 грн</td>
+                                <td>Є</td>
+                            </tr>
+                            <tr>
+                                <td>Монітор</td>
+                                <td>9 500 грн</td>
+                                <td>Є</td>
+                            </tr>
+                            <tr>
+                                <td>Клавіатура</td>
+                                <td>2 500 грн</td>
+                                <td>Немає</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Форма -->
+            <div class="panel" style="margin-top: 30px;" id="contacts">
+                <h3>Зворотний зв'язок</h3>
+                <form class="contact-form">
+                    <div class="field">
+                        <label for="name">Ім'я</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hint email-error" required>
+                        <p class="hint" id="email-hint">Наприклад: student@example.com</p>
+                        <p class="error" id="email-error" style="display:none;">Введіть повну адресу електронної пошти.</p>
+                    </div>
+
+                    <div class="field">
+                        <label for="topic">Тема звернення</label>
+                        <select id="topic" name="topic">
+                            <option value="order">Замовлення</option>
+                            <option value="question">Питання</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Повідомлення</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+
+                    <div class="field checkbox-field">
+                        <input type="checkbox" id="agrees" name="agrees" required>
+                        <label for="agrees">Погоджуюся з правилами</label>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-primary">Надіслати повідомлення</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Бокова панель -->
+        <aside class="panel sidebar">
+            <h3>Корисна інформація</h3>
+            <p>Безкоштовна доставка від 20 000 грн.</p>
+            <p>Гарантія — відповідно до умов виробника.</p>
+
+            <!-- SVG-елемент «Перевірена якість» -->
+            <div class="feature">
+                <svg class="feature-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="60" cy="60" r="48" fill="#1d4ed8"/>
+                    <path d="M38 60 L54 76 L84 44" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div>
+                    <h3>Перевірена якість</h3>
+                    <p>На товари надається гарантія виробника.</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Підвал -->
+    <footer class="site-footer">
+        <p>&copy; 2026 TechStore</p>
+    </footer>
+
+</body>
+</html>
