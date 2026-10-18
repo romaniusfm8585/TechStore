@@ -39,8 +39,9 @@
                     <p class="price">35 000 грн</p>
                     <div class="card-actions">
                         <a class="btn btn-secondary" href="#">Детальніше</a>
-                        <button class="btn btn-primary" type="button">До кошика</button>
+                        <button class="btn btn-primary" id="buy-button" type="button">До кошика</button>
                     </div>
+                    <p id="cart-status" style="margin-top: 10px; font-weight: bold;">Товарів у кошику: 0</p>
                 </article>
 
                 <article class="product-card">
@@ -131,17 +132,18 @@
             <!-- Форма -->
             <div class="panel" style="margin-top: 30px;" id="contacts">
                 <h3>Зворотний зв'язок</h3>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form" novalidate>
                     <div class="field">
                         <label for="name">Ім'я</label>
                         <input type="text" id="name" name="name" autocomplete="name" required>
+                        <p class="error" id="name-error"></p>
                     </div>
                     
                     <div class="field">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hint email-error" required>
                         <p class="hint" id="email-hint">Наприклад: student@example.com</p>
-                        <p class="error" id="email-error" style="display:none;">Введіть повну адресу електронної пошти.</p>
+                        <p class="error" id="email-error"></p>
                     </div>
 
                     <div class="field">
@@ -194,5 +196,7 @@
         <p>&copy; 2026 TechStore</p>
     </footer>
 
+    <!-- Підключення JavaScript -->
+    <script src="js/script.js" defer></script>
 </body>
 </html>
